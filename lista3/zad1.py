@@ -70,16 +70,31 @@ def decode(data: str) -> str:
     for frame in frames:
         frame = filterPreventFlags(frame)
         if crc(frame, False) != "0" * (len(GEN) - 1):
-            warn("Frame containing {} is wrong".format(frame))
+            warn(f"Frame containing {frame} is wrong")
         else:
             frame = frame[:-(len(GEN) - 1)]
             decoded.append(frame)
     
     return "".join(decoded)
 
-x = "0111111010101011111"
-print(x)
-x = encode(x)
-print(x)
-x = decode(x)
-print(x)
+def main():
+    file = open("Z.txt")
+    data = file.read()
+    file.close()
+
+    encoded = encode(data)
+
+    file = open("W.txt", "w")
+    file.write(encoded)
+    file.close()
+
+    file = open("W.txt")
+    data = file.read()
+    file.close()
+
+    decoded = decode(data)
+
+    print(decoded)
+
+if __name__ == "__main__":
+    main()
