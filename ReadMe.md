@@ -33,3 +33,10 @@ Adrian Herda
     5. Możliwe było wysyłanie komunikatów "ping" z dowolnego urządzenia w sieci wirtualnej na zewnętrzny adres, np. "google.com".
 2. Ustaw przechwytywanie komunikatów w sieciach: 192.168.0.0, 192.168.2.0, 192.168.3.0.
 3. Przeanalizuj przechwycone komunikaty dla zapytania wysłanego z komputera PC2: 'ping google.com'.
+### Lista 5
+1. Plik [server3.pl](lista5/przykład/server3.pl) zawiera przykładowy program serwera protokołu HTTP.
+    1. Uruchom ten skrypt, przetestuj, zastanów się jak działa.
+    2. Nawiąż połączenie za pomocą przeglądarki internetowej.
+    3. Zmień skrypt (lub napisz własny serwer w dowolnym języku programowania) tak aby wysyłał do klienta nagłówek jego żądania.
+    4. Zmień skrypt (lub napisz własny serwer w dowolnym języku programowania) tak aby obsugiwał żądania klienta do prostego tekstowego serwisu WWW (kilka statycznych ston z wzajemnymi odwołaniami) zapisanego w pewnym katalogu dysku lokalnego komputera na którym uruchomiony jest skrypt serwera.
+    5. Przechwyć komunikaty do/od serwera za pomocą analizatora sieciowego - przeanalizuj ich konstrukcję.
