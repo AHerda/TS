@@ -14,7 +14,7 @@ while (my $c = $d->accept) {
     while (my $r = $c->get_request) {
         if ($r->method eq 'GET') {
             
-            $file_s= "./index.html";    # index.html - jakis istniejacy plik
+            $file_s= "../strona/index.html";    # index.html - jakis istniejacy plik
             $c->send_file_response($file_s);
 
         }
